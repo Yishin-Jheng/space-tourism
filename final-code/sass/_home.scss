@@ -1,0 +1,78 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/home/background-home-desktop.jpg);
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 3rem 0 0 3rem;
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 2rem;
+  }
+
+  &__decoline {
+    height: 1px;
+    width: 35vw;
+    background-color: rgba($color-white, 0.2);
+    transform: translateX(4rem);
+    position: relative;
+    z-index: 10;
+  }
+
+  &__links {
+    position: relative;
+    display: flex;
+    gap: 5rem;
+
+    width: 65%;
+    padding: 0 4rem 0 15rem;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0.05),
+      rgba($color-primary, 0.3)
+    );
+  }
+
+  &__link {
+    color: $color-white;
+    padding: 4rem 0 calc(4rem - 3px) 0;
+    border-bottom: 3px solid rgba($color-white, 0);
+    transition: border-bottom 0.2s;
+
+    &--active {
+      border-bottom: 3px solid rgba($color-white, 1);
+    }
+
+    &:hover:not(.nav__link--active) {
+      padding: 4rem 0 calc(4rem - 3px) 0;
+      border-bottom: 3px solid rgba($color-white, 0.4);
+    }
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-column-gap: calc(70% - 60rem);
+  justify-content: center;
+  padding: 18rem 0 15rem 0;
+
+  &__btn {
+    align-self: end;
+    position: relative;
+  }
+
+  &__h1 {
+    color: $color-white;
+  }
+}

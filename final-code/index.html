@@ -3,29 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <!-- icon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="./assets/shared/logo.svg"
     />
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
       rel="stylesheet"
     />
-    <!-- /google font -->
 
-    <title>Frontend Mentor | Space tourism website</title>
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Space Tourism | Home</title>
   </head>
   <body>
-    00 Home 01 Destination 02 Crew 03 Technology So, you want to travel to Space
-    Let’s face it; if you want to go to space, you might as well genuinely go to
-    outer space and not hover kind of on the edge of it. Well sit back, and
-    relax because we’ll give you a truly out of this world experience! Explore
+    <div class="background">
+      <nav class="nav nav-text">
+        <img
+          src="./assets/shared/logo.svg"
+          alt="icon of space toursim"
+          class="nav__icon"
+        />
+        <div class="nav__decoline">&nbsp;</div>
+        <div class="nav__links">
+          <div class="nav__link nav__link--active">
+            <b>00</b>&nbsp;&nbsp;Home
+          </div>
+          <div class="nav__link"><b>01</b>&nbsp;&nbsp;Destination</div>
+          <div class="nav__link"><b>02</b>&nbsp;&nbsp;Crew</div>
+          <div class="nav__link"><b>03</b>&nbsp;&nbsp;Technology</div>
+        </div>
+      </nav>
+
+      <main class="main">
+        <div class="main__text">
+          <div class="heading-5">So, you want to travel to</div>
+          <h1 class="heading-1 main__h1">Space</h1>
+
+          <span class="body-text main__span"
+            >Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </span>
+        </div>
+        <div class="main__btn">
+          <div class="btn"><span>Explore</span></div>
+          <div class="btn--hover">&nbsp;</div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

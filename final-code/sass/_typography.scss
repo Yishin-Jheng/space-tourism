@@ -1,0 +1,100 @@
+%heading {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+%sub-heading {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 15rem;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 10rem;
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 5.6rem;
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 3.2rem;
+}
+
+.heading-5 {
+  @extend %sub-heading;
+  font-size: 2.8rem;
+  letter-spacing: 4.75px;
+}
+
+.subheading-1 {
+  @extend %heading;
+  font-size: 2.8rem;
+}
+
+.subheading-2 {
+  @extend %sub-heading;
+  font-size: 1.4rem;
+  letter-spacing: 2.35px;
+}
+
+.nav-text {
+  @extend %sub-heading;
+  font-size: 1.6rem;
+  letter-spacing: 2.7px;
+}
+
+.body-text {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.btn {
+  @extend %heading;
+  background-color: $color-white;
+  color: $color-primary;
+  border: none;
+  border-radius: 50%;
+  font-size: 3rem;
+  cursor: pointer;
+
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  z-index: 10;
+
+  &--hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.5);
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+    background-color: rgba($color-white, 0.15);
+    z-index: 1;
+  }
+
+  &:hover + &--hover {
+    transform: scale(1.5);
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
