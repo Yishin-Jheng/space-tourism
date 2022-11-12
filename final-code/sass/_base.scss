@@ -3,6 +3,10 @@ $color-primary: #0b0d17;
 $color-secondary: #d0d6f9;
 $color-white: #fff;
 
+$color-grey-dark: #50535b;
+
+//////////////////////////////////////@at-root
+
 *,
 *::before,
 *::after {
@@ -21,4 +25,71 @@ body {
   color: $color-secondary;
   font-weight: 400;
   line-height: 1.6;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  justify-content: center;
+  padding: 15rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding: 3rem 0 0 3rem;
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 2rem;
+  }
+
+  &__decoline {
+    height: 1px;
+    width: 35vw;
+    background-color: rgba($color-white, 0.2);
+    transform: translateX(4rem);
+    position: relative;
+    z-index: 10;
+  }
+
+  &__links {
+    position: relative;
+    display: flex;
+    gap: 5rem;
+
+    width: 60%;
+    padding: 0 4rem 0 13rem;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background-image: linear-gradient(
+      to right,
+      rgba($color-white, 0.05),
+      rgba($color-primary, 0.3)
+    );
+  }
+
+  &__link {
+    color: $color-white;
+    cursor: pointer;
+    padding: 3rem 0 calc(3rem - 3px) 0;
+    border-bottom: 3px solid rgba($color-white, 0);
+    transition: border-bottom 0.2s;
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+    }
+
+    &--active {
+      border-bottom: 3px solid rgba($color-white, 1);
+    }
+
+    &:hover:not(.nav__link--active) {
+      border-bottom: 3px solid rgba($color-white, 0.4);
+    }
+  }
 }
