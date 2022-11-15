@@ -1,20 +1,9 @@
 .background-2 {
-  width: 100%;
-  height: 100%;
   background-image: url(../assets/destination/background-destination-desktop.jpg);
   background-size: cover;
-}
-
-.sub-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(-100%);
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
 .planet-img {
@@ -52,17 +41,15 @@
 
 .destination {
   grid-column-gap: 12rem;
+  padding: 10rem 0;
 
   &__title {
     position: relative;
   }
 
-  &__num {
-    color: $color-grey-dark;
-    font-weight: bold;
-  }
-
   &__content {
+    margin-top: 9rem;
+
     .heading-2,
     .subheading-1 {
       color: $color-white;

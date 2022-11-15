@@ -4,6 +4,7 @@ $color-secondary: #d0d6f9;
 $color-white: #fff;
 
 $color-grey-dark: #50535b;
+$color-grey-light: #8f9195;
 
 //////////////////////////////////////@at-root
 
@@ -16,6 +17,7 @@ $color-grey-dark: #50535b;
 }
 
 html {
+  min-height: 100%;
   box-sizing: border-box;
   font-size: 62.5%; // 10px as 1 rem
 }
@@ -31,7 +33,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, min-content);
   justify-content: center;
-  padding: 15rem 0;
 }
 
 .nav {
@@ -68,8 +69,12 @@ body {
     background-image: linear-gradient(
       to right,
       rgba($color-white, 0.05),
-      rgba($color-primary, 0.3)
+      rgba($color-secondary, 0.1)
     );
+
+    & > * {
+      text-decoration: none;
+    }
   }
 
   &__link {
@@ -79,11 +84,6 @@ body {
     border-bottom: 3px solid rgba($color-white, 0);
     transition: border-bottom 0.2s;
 
-    a {
-      color: currentColor;
-      text-decoration: none;
-    }
-
     &--active {
       border-bottom: 3px solid rgba($color-white, 1);
     }
@@ -91,5 +91,26 @@ body {
     &:hover:not(.nav__link--active) {
       border-bottom: 3px solid rgba($color-white, 0.4);
     }
+  }
+}
+
+.sub-title {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // transform: translateY(-100%);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+
+  &__num {
+    color: $color-grey-dark;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: $color-white;
   }
 }
