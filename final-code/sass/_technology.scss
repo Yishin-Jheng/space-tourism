@@ -1,0 +1,71 @@
+.background-4 {
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+.technology {
+  grid-column-gap: 0;
+  justify-content: space-between;
+  padding-top: 10rem;
+
+  &__content {
+    margin-left: 16rem;
+    width: 65rem;
+
+    .sub-title {
+      margin-bottom: 14rem;
+    }
+
+    .heading-3 {
+      color: $color-white;
+    }
+
+    .body-text {
+      display: block;
+      width: 43rem;
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-right: 8rem;
+
+    .tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 8rem;
+      height: 8rem;
+      color: $color-white;
+      border: 1px solid rgba($color-white, 0.3);
+      border-radius: 50%;
+      background-color: transparent;
+      transition: all 0.2s;
+
+      &:hover:not(.tab--active) {
+        border: 1px solid $color-white;
+      }
+
+      &--active {
+        color: $color-primary;
+        background-color: $color-white;
+      }
+    }
+  }
+
+  &__img {
+    margin-top: 8rem;
+  }
+}

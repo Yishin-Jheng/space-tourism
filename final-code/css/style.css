@@ -18,8 +18,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, min-content);
-  justify-content: center; }
+  grid-template-columns: repeat(2, min-content); }
 
 .nav {
   display: flex;
@@ -51,7 +50,7 @@ body {
   .nav__link {
     color: #fff;
     cursor: pointer;
-    padding: 3rem 0 calc(3rem - 3px) 0;
+    padding: 3.5rem 0 calc(3.5rem - 3px) 0;
     border-bottom: 3px solid rgba(255, 255, 255, 0);
     transition: border-bottom 0.2s; }
     .nav__link--active {
@@ -77,7 +76,6 @@ body {
 
 .heading-5, .subheading-2, .nav-text {
   font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
   text-transform: uppercase; }
 
 .heading-1 {
@@ -152,6 +150,7 @@ body {
 
 .home {
   grid-column-gap: calc(70% - 60rem);
+  justify-content: center;
   padding: 18rem 0; }
   .home__btn {
     align-self: end;
@@ -191,6 +190,7 @@ body {
 
 .destination {
   grid-column-gap: 12rem;
+  justify-content: center;
   padding: 10rem 0; }
   .destination__title {
     position: relative; }
@@ -221,9 +221,9 @@ body {
 
 .crew {
   grid-column-gap: 0;
+  justify-content: center;
   padding-top: 10rem; }
   .crew__content {
-    position: relative;
     width: 50rem; }
     .crew__content .sub-title {
       margin-bottom: 15rem; }
@@ -252,3 +252,52 @@ body {
         background-color: rgba(255, 255, 255, 0.5); }
       .crew__dots .dot--active {
         background-color: #fff; }
+
+.background-4 {
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center; }
+
+.technology {
+  grid-column-gap: 0;
+  justify-content: space-between;
+  padding-top: 10rem; }
+  .technology__content {
+    margin-left: 16rem;
+    width: 65rem; }
+    .technology__content .sub-title {
+      margin-bottom: 14rem; }
+    .technology__content .heading-3 {
+      color: #fff; }
+    .technology__content .body-text {
+      display: block;
+      width: 43rem;
+      margin-bottom: 10rem; }
+  .technology__container {
+    display: flex; }
+  .technology__tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-right: 8rem; }
+    .technology__tabs .tab {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 8rem;
+      height: 8rem;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      background-color: transparent;
+      transition: all 0.2s; }
+      .technology__tabs .tab:hover:not(.tab--active) {
+        border: 1px solid #fff; }
+      .technology__tabs .tab--active {
+        color: #0b0d17;
+        background-color: #fff; }
+  .technology__img {
+    margin-top: 8rem; }

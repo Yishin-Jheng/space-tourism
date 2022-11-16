@@ -8,10 +8,10 @@
 
 .crew {
   grid-column-gap: 0;
+  justify-content: center;
   padding-top: 10rem;
 
   &__content {
-    position: relative;
     width: 50rem;
 
     .sub-title {

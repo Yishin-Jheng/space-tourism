@@ -8,6 +8,7 @@
 
 .home {
   grid-column-gap: calc(70% - 60rem);
+  justify-content: center;
   padding: 18rem 0;
 
   &__btn {

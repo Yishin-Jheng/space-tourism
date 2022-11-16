@@ -32,7 +32,6 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, min-content);
-  justify-content: center;
 }
 
 .nav {
@@ -80,7 +79,7 @@ body {
   &__link {
     color: $color-white;
     cursor: pointer;
-    padding: 3rem 0 calc(3rem - 3px) 0;
+    padding: 3.5rem 0 calc(3.5rem - 3px) 0;
     border-bottom: 3px solid rgba($color-white, 0);
     transition: border-bottom 0.2s;
 
@@ -95,11 +94,6 @@ body {
 }
 
 .sub-title {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // transform: translateY(-100%);
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
