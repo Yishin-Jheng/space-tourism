@@ -24,6 +24,9 @@
     <!-- css file -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- js file -->
+    <script defer src="./js/scriptTechnology.js"></script>
+
     <title>Space Tourism | Home</title>
   </head>
   <body>
@@ -64,37 +67,75 @@
 
         <div class="technology__container">
           <div class="technology__tabs heading-4">
-            <div class="tab tab--active">
+            <div class="tab tab--active" data-slide="0">
               <span>1</span>
             </div>
-            <div class="tab">
+            <div class="tab" data-slide="1">
               <span>2</span>
             </div>
-            <div class="tab">
+            <div class="tab" data-slide="2">
               <span>3</span>
             </div>
           </div>
 
-          <div>
-            <div class="nav-text">The terminology...</div>
-            <h2 class="heading-3">Launch vehicle</h2>
-            <span class="body-text">
-              A launch vehicle or carrier rocket is a rocket-propelled vehicle
-              used to carry a payload from Earth's surface to space, usually to
-              Earth orbit or beyond. Our WEB-X carrier rocket is the most
-              powerful in operation. Standing 150 metres tall, it's quite an
-              awe-inspiring sight on the launch pad!
-            </span>
+          <div class="technology__slider">
+            <div class="technology__slide">
+              <div class="nav-text">The terminology...</div>
+              <h2 class="heading-3">Launch vehicle</h2>
+              <span class="body-text">
+                A launch vehicle or carrier rocket is a rocket-propelled vehicle
+                used to carry a payload from Earth's surface to space, usually
+                to Earth orbit or beyond. Our WEB-X carrier rocket is the most
+                powerful in operation. Standing 150 metres tall, it's quite an
+                awe-inspiring sight on the launch pad!
+              </span>
+            </div>
+            <div class="technology__slide">
+              <div class="nav-text">The terminology...</div>
+              <h2 class="heading-3">Spaceport</h2>
+              <span class="body-text">
+                A spaceport or cosmodrome is a site for launching (or receiving)
+                spacecraft, by analogy to the seaport for ships or airport for
+                aircraft. Based in the famous Cape Canaveral, our spaceport is
+                ideally situated to take advantage of the Earth’s rotation for
+                launch.
+              </span>
+            </div>
+            <div class="technology__slide">
+              <div class="nav-text">The terminology...</div>
+              <h2 class="heading-3">Space capsule</h2>
+              <span class="body-text">
+                A space capsule is an often-crewed spacecraft that uses a
+                blunt-body reentry capsule to reenter the Earth's atmosphere
+                without wings. Our capsule is where you'll spend your time
+                during the flight. It includes a space gym, cinema, and plenty
+                of other activities to keep you entertained.
+              </span>
+            </div>
           </div>
         </div>
       </div>
 
-      <figure class="technology__img">
-        <img
-          src="./assets/technology/image-launch-vehicle-portrait.jpg"
-          alt="Douglas Hurley"
-        />
-      </figure>
+      <div class="technology__imgs">
+        <figure class="technology__img">
+          <img
+            src="./assets/technology/image-launch-vehicle-portrait.jpg"
+            alt="Douglas Hurley"
+          />
+        </figure>
+        <figure class="technology__img">
+          <img
+            src="./assets/technology/image-spaceport-portrait.jpg"
+            alt="Douglas Hurley"
+          />
+        </figure>
+        <figure class="technology__img">
+          <img
+            src="./assets/technology/image-space-capsule-portrait.jpg"
+            alt="Douglas Hurley"
+          />
+        </figure>
+      </div>
     </main>
   </body>
 </html>

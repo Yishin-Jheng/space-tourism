@@ -166,7 +166,10 @@ body {
   background-position: center center; }
 
 .planet-img {
-  margin: 8rem; }
+  margin: 8rem;
+  display: none; }
+  .planet-img--active {
+    display: block; }
 
 .sub-nav {
   display: flex;
@@ -204,6 +207,10 @@ body {
       width: 43rem;
       padding-bottom: 5rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  .destination__text {
+    display: none; }
+    .destination__text--active {
+      display: block; }
   .destination__info {
     display: grid;
     grid-template-columns: repeat(2, max-content);
@@ -224,7 +231,7 @@ body {
   justify-content: center;
   padding-top: 10rem; }
   .crew__content {
-    width: 50rem; }
+    width: 63rem; }
     .crew__content .sub-title {
       margin-bottom: 15rem; }
     .crew__content .heading-3 {
@@ -236,9 +243,29 @@ body {
       display: block;
       width: 43rem;
       margin-bottom: 10rem; }
+  .crew__slider {
+    position: relative;
+    min-height: 32rem;
+    overflow: hidden; }
+  .crew__slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0 1rem;
+    transition: transform 1s; }
+  .crew__imgs {
+    position: relative;
+    width: 62.5rem;
+    min-height: 70rem;
+    overflow: hidden; }
   .crew__img {
-    margin-left: 15rem; }
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-left: 5rem;
+    transition: transform 1s; }
   .crew__dots {
+    margin-top: 8rem;
     display: flex;
     align-items: center;
     gap: 2rem; }
@@ -277,6 +304,16 @@ body {
       margin-bottom: 10rem; }
   .technology__container {
     display: flex; }
+  .technology__slider {
+    position: relative;
+    min-width: 49rem;
+    overflow: hidden; }
+  .technology__slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0 1rem;
+    transition: transform 1s; }
   .technology__tabs {
     display: flex;
     flex-direction: column;
@@ -299,5 +336,16 @@ body {
       .technology__tabs .tab--active {
         color: #0b0d17;
         background-color: #fff; }
+  .technology__imgs {
+    position: relative;
+    width: 51.5rem;
+    min-height: 60rem;
+    overflow: hidden; }
   .technology__img {
-    margin-top: 8rem; }
+    position: absolute;
+    right: 0;
+    width: 100%;
+    transition: transform 1s; }
+    .technology__img > * {
+      display: block;
+      margin-top: 8rem; }

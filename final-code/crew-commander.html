@@ -24,6 +24,9 @@
     <!-- css file -->
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- js file -->
+    <script defer src="./js/scriptCrew.js"></script>
+
     <title>Space Tourism | Home</title>
   </head>
   <body>
@@ -62,27 +65,86 @@
           <span class="heading-5 sub-title__text">Meet your crew</span>
         </div>
 
-        <h2 class="heading-4">Commander</h2>
-        <h3 class="heading-3">Douglas Hurley</h3>
-        <span class="body-text"
-          >Douglas Gerald Hurley is an American engineer, former Marine Corps
-          pilot and former NASA astronaut. He launched into space for the third
-          time as commander of Crew Dragon Demo-2.</span
-        >
+        <div class="crew__slider">
+          <div class="crew__slide crew__slide--1">
+            <h2 class="heading-4">Commander</h2>
+            <h3 class="heading-3">Douglas Hurley</h3>
+            <span class="body-text"
+              >Douglas Gerald Hurley is an American engineer, former Marine
+              Corps pilot and former NASA astronaut. He launched into space for
+              the third time as commander of Crew Dragon Demo-2.</span
+            >
+          </div>
+
+          <div class="crew__slide crew__slide--2">
+            <h2 class="heading-4">Mission Specialist</h2>
+            <h3 class="heading-3">Mark Shuttleworth</h3>
+            <span class="body-text"
+              >Mark Richard Shuttleworth is the founder and CEO of Canonical,
+              the company behind the Linux-based Ubuntu operating system.
+              Shuttleworth became the first South African to travel to space as
+              a space tourist.</span
+            >
+          </div>
+
+          <div class="crew__slide crew__slide--3">
+            <h2 class="heading-4">Pilot</h2>
+            <h3 class="heading-3">Victor Glover</h3>
+            <span class="body-text"
+              >Pilot on the first operational flight of the SpaceX Crew Dragon
+              to the International Space Station. Glover is a commander in the
+              U.S. Navy where he pilots an F/A-18.He was a crew member of
+              Expedition 64, and served as a station systems flight
+              engineer.</span
+            >
+          </div>
+
+          <div class="crew__slide crew__slide--4">
+            <h2 class="heading-4">Flight Engineer</h2>
+            <h3 class="heading-3">Anousheh Ansari</h3>
+            <span class="body-text"
+              >Anousheh Ansari is an Iranian American engineer and co-founder of
+              Prodea Systems. Ansari was the fourth self-funded space tourist,
+              the first self-funded woman to fly to the ISS, and the first
+              Iranian in space.</span
+            >
+          </div>
+        </div>
+
         <div class="crew__dots">
-          <div class="dot dot--active">&nbsp;</div>
-          <div class="dot">&nbsp;</div>
-          <div class="dot">&nbsp;</div>
-          <div class="dot">&nbsp;</div>
+          <div class="dot dot--active" data-slide="0">&nbsp;</div>
+          <div class="dot" data-slide="1">&nbsp;</div>
+          <div class="dot" data-slide="2">&nbsp;</div>
+          <div class="dot" data-slide="3">&nbsp;</div>
         </div>
       </div>
 
-      <figure class="crew__img">
-        <img
-          src="./assets/crew/image-douglas-hurley.png"
-          alt="Douglas Hurley"
-        />
-      </figure>
+      <div class="crew__imgs">
+        <figure class="crew__img crew__img--1">
+          <img
+            src="./assets/crew/image-douglas-hurley.png"
+            alt="Douglas Hurley"
+          />
+        </figure>
+        <figure class="crew__img crew__img--2">
+          <img
+            src="./assets/crew/image-mark-shuttleworth.png"
+            alt="Mark Shuttleworth"
+          />
+        </figure>
+        <figure class="crew__img crew__img--3">
+          <img
+            src="./assets/crew/image-victor-glover.png"
+            alt="Victor Glover"
+          />
+        </figure>
+        <figure class="crew__img crew__img--4">
+          <img
+            src="./assets/crew/image-anousheh-ansari.png"
+            alt="Anousheh Ansari"
+          />
+        </figure>
+      </div>
     </main>
   </body>
 </html>

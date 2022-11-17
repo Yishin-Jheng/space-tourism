@@ -8,6 +8,11 @@
 
 .planet-img {
   margin: 8rem;
+  display: none;
+
+  &--active {
+    display: block;
+  }
 }
 
 .sub-nav {
@@ -61,6 +66,14 @@
       width: 43rem;
       padding-bottom: 5rem;
       border-bottom: 1px solid rgba($color-white, 0.2);
+    }
+  }
+
+  &__text {
+    display: none;
+
+    &--active {
+      display: block;
     }
   }
 

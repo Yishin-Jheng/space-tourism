@@ -34,6 +34,20 @@
     display: flex;
   }
 
+  &__slider {
+    position: relative;
+    min-width: 49rem;
+    overflow: hidden;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0 1rem;
+    transition: transform 1s;
+  }
+
   &__tabs {
     display: flex;
     flex-direction: column;
@@ -65,7 +79,22 @@
     }
   }
 
+  &__imgs {
+    position: relative;
+    width: 51.5rem;
+    min-height: 60rem;
+    overflow: hidden;
+  }
+
   &__img {
-    margin-top: 8rem;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    transition: transform 1s;
+
+    & > * {
+      display: block;
+      margin-top: 8rem;
+    }
   }
 }

@@ -12,7 +12,7 @@
   padding-top: 10rem;
 
   &__content {
-    width: 50rem;
+    width: 63rem;
 
     .sub-title {
       margin-bottom: 15rem;
@@ -34,11 +34,37 @@
     }
   }
 
+  &__slider {
+    position: relative;
+    min-height: 32rem;
+    overflow: hidden;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0 1rem;
+    transition: transform 1s;
+  }
+
+  &__imgs {
+    position: relative;
+    width: 62.5rem;
+    min-height: 70rem;
+    overflow: hidden;
+  }
+
   &__img {
-    margin-left: 15rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-left: 5rem;
+    transition: transform 1s;
   }
 
   &__dots {
+    margin-top: 8rem;
     display: flex;
     align-items: center;
     gap: 2rem;
