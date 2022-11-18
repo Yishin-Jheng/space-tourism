@@ -6,6 +6,11 @@ $color-white: #fff;
 $color-grey-dark: #50535b;
 $color-grey-light: #8f9195;
 
+// MEDIA QUERY
+$screen-large2: 81.25em; // 1300px
+$screen-large1: 68.75em; // 1100px
+$screen-tablet: 62.5em; // 1000px
+
 //////////////////////////////////////@at-root
 
 *,
@@ -32,6 +37,10 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, min-content);
+
+  @media only screen and (max-width: $screen-tablet) {
+    grid-template-columns: min-content;
+  }
 }
 
 .nav {
@@ -41,10 +50,19 @@ body {
 
   padding: 3rem 0 0 3rem;
 
+  @media only screen and (max-width: $screen-tablet) {
+    padding: 0;
+    justify-content: space-between;
+  }
+
   &__icon {
     width: 5rem;
     height: 5rem;
     margin: 0 2rem;
+
+    @media only screen and (max-width: $screen-tablet) {
+      margin: 6px 4rem 0 4rem;
+    }
   }
 
   &__decoline {
@@ -54,6 +72,13 @@ body {
     transform: translateX(4rem);
     position: relative;
     z-index: 10;
+
+    @media only screen and (max-width: $screen-large2) {
+      width: 33vw;
+    }
+    @media only screen and (max-width: $screen-tablet) {
+      display: none;
+    }
   }
 
   &__links {
@@ -74,6 +99,22 @@ body {
     & > * {
       text-decoration: none;
     }
+
+    @media only screen and (max-width: $screen-large2) {
+      gap: 4rem;
+      padding: 0 2rem 0 9rem;
+    }
+
+    @media only screen and (max-width: $screen-large1) {
+      gap: 3rem;
+      padding: 0 2rem 0 7rem;
+    }
+
+    @media only screen and (max-width: $screen-tablet) {
+      justify-content: space-evenly;
+      gap: 0;
+      padding: 0;
+    }
   }
 
   &__link {
@@ -89,6 +130,12 @@ body {
 
     &:hover:not(.nav__link--active) {
       border-bottom: 3px solid rgba($color-white, 0.4);
+    }
+
+    &__num {
+      @media only screen and (max-width: $screen-tablet) {
+        display: none;
+      }
     }
   }
 }

@@ -1,3 +1,10 @@
+%slide-setting {
+  position: absolute;
+  width: 100%;
+}
+
+//////////////////////////////
+
 .background-3 {
   background-image: url(../assets/crew/background-crew-desktop.jpg);
   background-size: cover;
@@ -41,11 +48,10 @@
   }
 
   &__slide {
-    position: absolute;
+    @extend %slide-setting;
+
     top: 0;
-    width: 100%;
     margin: 0 1rem;
-    transition: transform 1s;
   }
 
   &__imgs {
@@ -56,11 +62,10 @@
   }
 
   &__img {
-    position: absolute;
+    @extend %slide-setting;
+
     bottom: 0;
-    width: 100%;
     margin-left: 5rem;
-    transition: transform 1s;
   }
 
   &__dots {
@@ -73,6 +78,7 @@
       width: 1.5rem;
       height: 1.5rem;
       border-radius: 50%;
+      cursor: pointer;
       background-color: rgba($color-white, 0.3);
       transition: all 0.2s;
 

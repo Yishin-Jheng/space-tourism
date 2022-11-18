@@ -4,12 +4,22 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+
+  @media only screen and (max-width: $screen-tablet) {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
 }
 
 .home {
   grid-column-gap: calc(70% - 60rem);
   justify-content: center;
   padding: 18rem 0;
+
+  @media only screen and (max-width: $screen-tablet) {
+    gap: 13rem;
+    padding: 13rem 0;
+    text-align: center;
+  }
 
   &__btn {
     align-self: end;
@@ -18,5 +28,50 @@
 
   &__h1 {
     color: $color-white;
+  }
+}
+
+.btn {
+  @extend %heading;
+
+  background-color: $color-white;
+  color: $color-primary;
+  border: none;
+  border-radius: 50%;
+  font-size: 3rem;
+  cursor: pointer;
+
+  width: 25rem;
+  height: 25rem;
+  position: relative;
+  z-index: 10;
+
+  &--hover {
+    position: absolute;
+    top: 0;
+    left: 22%;
+    transform: scale(0.5);
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+    background-color: rgba($color-white, 0.15);
+    z-index: 1;
+  }
+
+  &:hover + &--hover {
+    transform: scale(1.5);
+  }
+
+  @media only screen and (max-width: $screen-tablet) {
+    margin: 0 auto;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
