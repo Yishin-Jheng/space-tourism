@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+
+  @media only screen and (max-width: $screen-tablet) {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
 }
 
 .crew {
@@ -18,11 +22,31 @@
   justify-content: center;
   padding-top: 10rem;
 
+  @media only screen and (max-width: $screen-tablet) {
+    justify-items: center;
+  }
+
   &__content {
     width: 63rem;
 
+    @media only screen and (max-width: $screen-large2) {
+      width: 50rem;
+    }
+
+    @media only screen and (max-width: $screen-tablet) {
+      width: 100%;
+    }
+
     .sub-title {
       margin-bottom: 15rem;
+
+      @media only screen and (max-width: $screen-large2) {
+        margin-bottom: 10rem;
+      }
+
+      @media only screen and (max-width: $screen-tablet) {
+        margin-left: 10%;
+      }
     }
 
     .heading-3 {
@@ -38,20 +62,38 @@
       display: block;
       width: 43rem;
       margin-bottom: 10rem;
+
+      @media only screen and (max-width: $screen-tablet) {
+        width: 100%;
+      }
+
+      @media only screen and (max-width: $screen-tablet) {
+        margin-bottom: 5rem;
+        padding: 0 20%;
+      }
     }
   }
 
   &__slider {
     position: relative;
-    min-height: 32rem;
+    min-height: 38rem;
     overflow: hidden;
+
+    @media only screen and (max-width: $screen-tablet) {
+      text-align: center;
+      min-height: 32rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__slide {
     @extend %slide-setting;
 
     top: 0;
-    margin: 0 1rem;
+
+    @media only screen and (max-width: $screen-tablet) {
+      padding: 0;
+    }
   }
 
   &__imgs {
@@ -59,13 +101,25 @@
     width: 62.5rem;
     min-height: 70rem;
     overflow: hidden;
+
+    @media only screen and (max-width: $screen-large1) {
+      width: 55rem;
+    }
+
+    @media only screen and (max-width: $screen-tablet) {
+      width: 62.5rem;
+    }
   }
 
   &__img {
     @extend %slide-setting;
 
     bottom: 0;
-    margin-left: 5rem;
+
+    @media only screen and (max-width: $screen-tablet) {
+      margin-left: 0;
+      text-align: center;
+    }
   }
 
   &__dots {
@@ -73,6 +127,15 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @media only screen and (max-width: $screen-tablet) {
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $screen-tablet) {
+      margin-top: 0;
+      margin-bottom: 5rem;
+    }
 
     .dot {
       width: 1.5rem;

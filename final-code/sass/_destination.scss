@@ -4,6 +4,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
+
+  @media only screen and (max-width: $screen-tablet) {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
 }
 
 .planet-img {
@@ -11,7 +15,8 @@
   display: none;
 
   @media only screen and (max-width: $screen-tablet) {
-    margin: 8rem 16rem 2rem 16rem;
+    margin: 8rem 12rem 2rem 12rem;
+    text-align: center;
   }
 
   &--active {
@@ -59,12 +64,18 @@
   justify-content: center;
   padding: 10rem 0;
 
-  @media only screen and (max-width: $screen-tablet) {
+  @media only screen and (max-width: $screen-large2) {
     grid-column-gap: 0;
   }
 
   &__title {
     position: relative;
+
+    .sub-title {
+      @media only screen and (max-width: $screen-tablet) {
+        margin-left: 10%;
+      }
+    }
   }
 
   &__content {

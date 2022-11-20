@@ -63,8 +63,8 @@ const sliderComponent = function () {
   //////////  Event handlers  //////////
   // by keyboard
   document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowUp") prevSlide();
-    else if (e.key === "ArrowDown") nextSlide();
+    if (e.key === "ArrowUp" || e.key === "ArrowLeft") prevSlide();
+    else if (e.key === "ArrowDown" || e.key === "ArrowRight") nextSlide();
   });
 
   // by tab

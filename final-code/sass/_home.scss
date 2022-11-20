@@ -21,6 +21,14 @@
     text-align: center;
   }
 
+  &__span {
+    @media only screen and (max-width: $screen-tablet) {
+      display: block;
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
   &__btn {
     align-self: end;
     position: relative;
@@ -49,18 +57,27 @@
   &--hover {
     position: absolute;
     top: 0;
-    left: 22%;
-    transform: scale(0.5);
+    left: 0;
+    // transform: scale(0.5);
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
     transition: all 0.3s;
     background-color: rgba($color-white, 0.15);
     z-index: 1;
+
+    @media only screen and (max-width: $screen-tablet) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &:hover + &--hover {
     transform: scale(1.5);
+
+    @media only screen and (max-width: $screen-tablet) {
+      transform: scale(1.5) translateX(-33%);
+    }
   }
 
   @media only screen and (max-width: $screen-tablet) {

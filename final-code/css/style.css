@@ -21,7 +21,7 @@ body {
   grid-template-columns: repeat(2, min-content); }
   @media only screen and (max-width: 62.5em) {
     .grid-container {
-      grid-template-columns: min-content; } }
+      grid-template-columns: minmax(min-content, 1fr); } }
 
 .nav {
   display: flex;
@@ -161,6 +161,11 @@ body {
       gap: 13rem;
       padding: 13rem 0;
       text-align: center; } }
+  @media only screen and (max-width: 62.5em) {
+    .home__span {
+      display: block;
+      max-width: 60%;
+      margin: 0 auto; } }
   .home__btn {
     align-self: end;
     position: relative; }
@@ -181,16 +186,22 @@ body {
   .btn--hover {
     position: absolute;
     top: 0;
-    left: 22%;
-    transform: scale(0.5);
+    left: 0;
     width: 25rem;
     height: 25rem;
     border-radius: 50%;
     transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.15);
     z-index: 1; }
+    @media only screen and (max-width: 62.5em) {
+      .btn--hover {
+        left: 50%;
+        transform: translateX(-50%); } }
   .btn:hover + .btn--hover {
     transform: scale(1.5); }
+    @media only screen and (max-width: 62.5em) {
+      .btn:hover + .btn--hover {
+        transform: scale(1.5) translateX(-33%); } }
   @media only screen and (max-width: 62.5em) {
     .btn {
       margin: 0 auto; } }
@@ -207,13 +218,17 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center; }
+  @media only screen and (max-width: 62.5em) {
+    .background-2 {
+      background-image: url(../assets/destination/background-destination-tablet.jpg); } }
 
 .planet-img {
   margin: 8rem;
   display: none; }
   @media only screen and (max-width: 62.5em) {
     .planet-img {
-      margin: 8rem 16rem 2rem 16rem; } }
+      margin: 8rem 12rem 2rem 12rem;
+      text-align: center; } }
   .planet-img--active {
     display: block; }
 
@@ -246,11 +261,14 @@ body {
   grid-column-gap: 12rem;
   justify-content: center;
   padding: 10rem 0; }
-  @media only screen and (max-width: 62.5em) {
+  @media only screen and (max-width: 81.25em) {
     .destination {
       grid-column-gap: 0; } }
   .destination__title {
     position: relative; }
+    @media only screen and (max-width: 62.5em) {
+      .destination__title .sub-title {
+        margin-left: 10%; } }
   .destination__content {
     margin-top: 9rem; }
     @media only screen and (max-width: 62.5em) {
@@ -297,15 +315,33 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center; }
+  @media only screen and (max-width: 62.5em) {
+    .background-3 {
+      background-image: url(../assets/crew/background-crew-tablet.jpg); } }
 
 .crew {
   grid-column-gap: 0;
   justify-content: center;
   padding-top: 10rem; }
+  @media only screen and (max-width: 62.5em) {
+    .crew {
+      justify-items: center; } }
   .crew__content {
     width: 63rem; }
+    @media only screen and (max-width: 81.25em) {
+      .crew__content {
+        width: 50rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .crew__content {
+        width: 100%; } }
     .crew__content .sub-title {
       margin-bottom: 15rem; }
+      @media only screen and (max-width: 81.25em) {
+        .crew__content .sub-title {
+          margin-bottom: 10rem; } }
+      @media only screen and (max-width: 62.5em) {
+        .crew__content .sub-title {
+          margin-left: 10%; } }
     .crew__content .heading-3 {
       color: #fff;
       margin-bottom: 2rem; }
@@ -315,26 +351,56 @@ body {
       display: block;
       width: 43rem;
       margin-bottom: 10rem; }
+      @media only screen and (max-width: 62.5em) {
+        .crew__content .body-text {
+          width: 100%; } }
+      @media only screen and (max-width: 62.5em) {
+        .crew__content .body-text {
+          margin-bottom: 5rem;
+          padding: 0 20%; } }
   .crew__slider {
     position: relative;
-    min-height: 32rem;
+    min-height: 38rem;
     overflow: hidden; }
+    @media only screen and (max-width: 62.5em) {
+      .crew__slider {
+        text-align: center;
+        min-height: 32rem;
+        margin-bottom: 3rem; } }
   .crew__slide {
-    top: 0;
-    margin: 0 1rem; }
+    top: 0; }
+    @media only screen and (max-width: 62.5em) {
+      .crew__slide {
+        padding: 0; } }
   .crew__imgs {
     position: relative;
     width: 62.5rem;
     min-height: 70rem;
     overflow: hidden; }
+    @media only screen and (max-width: 68.75em) {
+      .crew__imgs {
+        width: 55rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .crew__imgs {
+        width: 62.5rem; } }
   .crew__img {
-    bottom: 0;
-    margin-left: 5rem; }
+    bottom: 0; }
+    @media only screen and (max-width: 62.5em) {
+      .crew__img {
+        margin-left: 0;
+        text-align: center; } }
   .crew__dots {
     margin-top: 8rem;
     display: flex;
     align-items: center;
     gap: 2rem; }
+    @media only screen and (max-width: 62.5em) {
+      .crew__dots {
+        justify-content: center; } }
+    @media only screen and (max-width: 62.5em) {
+      .crew__dots {
+        margin-top: 0;
+        margin-bottom: 5rem; } }
     .crew__dots .dot {
       width: 1.5rem;
       height: 1.5rem;
@@ -353,37 +419,82 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center; }
+  @media only screen and (max-width: 62.5em) {
+    .background-4 {
+      background-image: url(../assets/technology/background-technology-tablet.jpg); } }
 
 .technology {
   grid-column-gap: 0;
   justify-content: space-between;
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  position: relative; }
+  @media only screen and (max-width: 62.5em) {
+    .technology {
+      justify-content: center;
+      justify-items: center; } }
   .technology__content {
     margin-left: 16rem;
     width: 65rem; }
+    @media only screen and (max-width: 81.25em) {
+      .technology__content {
+        margin-left: 5rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .technology__content {
+        margin-top: 4rem;
+        margin-left: 0; } }
     .technology__content .sub-title {
       margin-bottom: 14rem; }
+      @media only screen and (max-width: 62.5em) {
+        .technology__content .sub-title {
+          position: absolute;
+          top: 10rem;
+          left: 10%;
+          margin-bottom: 0; } }
     .technology__content .heading-3 {
       color: #fff; }
     .technology__content .body-text {
       display: block;
       width: 43rem;
       margin-bottom: 10rem; }
+      @media only screen and (max-width: 62.5em) {
+        .technology__content .body-text {
+          width: 100%;
+          margin-bottom: 15rem; } }
   .technology__container {
     display: flex; }
+    @media only screen and (max-width: 62.5em) {
+      .technology__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 7rem;
+        text-align: center;
+        margin-bottom: 5rem; } }
   .technology__slider {
     position: relative;
     min-width: 49rem;
     overflow: hidden; }
+    @media only screen and (max-width: 62.5em) {
+      .technology__slider {
+        min-height: 32rem; } }
   .technology__slide {
     top: 0;
     margin: 0 1rem; }
+    @media only screen and (max-width: 62.5em) {
+      .technology__slide {
+        margin: 0; } }
   .technology__tabs {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
     margin-right: 8rem; }
+    @media only screen and (max-width: 81.25em) {
+      .technology__tabs {
+        margin-right: 3rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .technology__tabs {
+        flex-direction: row;
+        margin-right: 0; } }
     .technology__tabs .tab {
       display: flex;
       justify-content: center;
@@ -396,6 +507,10 @@ body {
       cursor: pointer;
       background-color: transparent;
       transition: all 0.2s; }
+      @media only screen and (max-width: 62.5em) {
+        .technology__tabs .tab {
+          width: 7rem;
+          height: 7rem; } }
       .technology__tabs .tab:hover:not(.tab--active) {
         border: 1px solid #fff; }
       .technology__tabs .tab--active {
@@ -406,8 +521,16 @@ body {
     width: 51.5rem;
     min-height: 60rem;
     overflow: hidden; }
+    @media only screen and (max-width: 62.5em) {
+      .technology__imgs {
+        grid-row: 1 / 2;
+        width: 100%;
+        min-height: 40rem; } }
   .technology__img {
     right: 0; }
     .technology__img > * {
       display: block;
       margin-top: 8rem; }
+      @media only screen and (max-width: 62.5em) {
+        .technology__img > * {
+          width: 101%; } }
