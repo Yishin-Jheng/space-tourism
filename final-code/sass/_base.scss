@@ -10,6 +10,7 @@ $color-grey-light: #8f9195;
 $screen-large2: 81.25em; // 1300px
 $screen-large1: 68.75em; // 1100px
 $screen-tablet: 62.5em; // 1000px
+$screen-mobile: 40.625em; // 630px
 
 //////////////////////////////////////@at-root
 
@@ -25,6 +26,8 @@ html {
   min-height: 100%;
   box-sizing: border-box;
   font-size: 62.5%; // 10px as 1 rem
+
+  overflow-x: hidden;
 }
 
 body {
@@ -64,6 +67,10 @@ body {
     @media only screen and (max-width: $screen-tablet) {
       margin: 6px 4rem 0 4rem;
     }
+
+    @media only screen and (max-width: $screen-mobile) {
+      margin: 4rem 4rem 0 4rem;
+    }
   }
 
   &__decoline {
@@ -79,6 +86,50 @@ body {
     }
     @media only screen and (max-width: $screen-tablet) {
       display: none;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media only screen and (max-width: $screen-mobile) {
+      position: fixed;
+      top: 4rem;
+      right: 4rem;
+      z-index: 1000;
+      cursor: pointer;
+      margin-top: 1rem;
+
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    &__icon-1,
+    &__icon-2,
+    &__icon-3 {
+      width: 3.5rem;
+      height: 4px;
+      background-color: $color-secondary;
+      display: inline-block;
+    }
+
+    &__icon-1,
+    &__icon-3 {
+      transform-origin: center;
+      transition: all 0.3s;
+    }
+
+    &__icon-1--active {
+      transform: rotate(135deg) translate(1rem, -1rem);
+    }
+
+    &__icon-2--active {
+      background-color: transparent;
+    }
+
+    &__icon-3--active {
+      transform: rotate(-135deg) translate(1rem, 1rem);
     }
   }
 
@@ -116,6 +167,35 @@ body {
       gap: 0;
       padding: 0;
     }
+
+    @media only screen and (max-width: $screen-mobile) {
+      position: fixed;
+      width: 70%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+
+      gap: 2rem;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      padding: 20rem 0 0 5rem;
+      transform: translateX(100%);
+      transition: all 0.3s;
+    }
+
+    &--close {
+      @media only screen and (max-width: $screen-mobile) {
+        transform: translateX(100%);
+      }
+    }
+
+    &--open {
+      @media only screen and (max-width: $screen-mobile) {
+        transform: translateX(0);
+      }
+    }
   }
 
   &__link {
@@ -125,17 +205,36 @@ body {
     border-bottom: 3px solid rgba($color-white, 0);
     transition: border-bottom 0.2s;
 
+    @media only screen and (max-width: $screen-mobile) {
+      padding: 1rem 0;
+      border-bottom: none;
+    }
+
     &--active {
       border-bottom: 3px solid rgba($color-white, 1);
+
+      @media only screen and (max-width: $screen-mobile) {
+        border-bottom: none;
+        border-right: 5px solid rgba($color-white, 1);
+      }
     }
 
     &:hover:not(.nav__link--active) {
       border-bottom: 3px solid rgba($color-white, 0.4);
+
+      @media only screen and (max-width: $screen-mobile) {
+        border-bottom: none;
+        border-right: 5px solid rgba($color-white, 0.4);
+      }
     }
 
     &__num {
       @media only screen and (max-width: $screen-tablet) {
         display: none;
+      }
+
+      @media only screen and (max-width: $screen-mobile) {
+        display: inline-block;
       }
     }
   }

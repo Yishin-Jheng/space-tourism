@@ -8,7 +8,8 @@
 html {
   min-height: 100%;
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow-x: hidden; }
 
 body {
   font-family: "Bellefair", serif;
@@ -39,6 +40,9 @@ body {
     @media only screen and (max-width: 62.5em) {
       .nav__icon {
         margin: 6px 4rem 0 4rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .nav__icon {
+        margin: 4rem 4rem 0 4rem; } }
   .nav__decoline {
     height: 1px;
     width: 35vw;
@@ -52,6 +56,33 @@ body {
     @media only screen and (max-width: 62.5em) {
       .nav__decoline {
         display: none; } }
+  .nav__button {
+    display: none; }
+    @media only screen and (max-width: 40.625em) {
+      .nav__button {
+        position: fixed;
+        top: 4rem;
+        right: 4rem;
+        z-index: 1000;
+        cursor: pointer;
+        margin-top: 1rem;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column; } }
+    .nav__button__icon-1, .nav__button__icon-2, .nav__button__icon-3 {
+      width: 3.5rem;
+      height: 4px;
+      background-color: #d0d6f9;
+      display: inline-block; }
+    .nav__button__icon-1, .nav__button__icon-3 {
+      transform-origin: center;
+      transition: all 0.3s; }
+    .nav__button__icon-1--active {
+      transform: rotate(135deg) translate(1rem, -1rem); }
+    .nav__button__icon-2--active {
+      background-color: transparent; }
+    .nav__button__icon-3--active {
+      transform: rotate(-135deg) translate(1rem, 1rem); }
   .nav__links {
     position: relative;
     display: flex;
@@ -76,19 +107,54 @@ body {
         justify-content: space-evenly;
         gap: 0;
         padding: 0; } }
+    @media only screen and (max-width: 40.625em) {
+      .nav__links {
+        position: fixed;
+        width: 70%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20rem 0 0 5rem;
+        transform: translateX(100%);
+        transition: all 0.3s; } }
+    @media only screen and (max-width: 40.625em) {
+      .nav__links--close {
+        transform: translateX(100%); } }
+    @media only screen and (max-width: 40.625em) {
+      .nav__links--open {
+        transform: translateX(0); } }
   .nav__link {
     color: #fff;
     cursor: pointer;
     padding: 3.5rem 0 calc(3.5rem - 3px) 0;
     border-bottom: 3px solid rgba(255, 255, 255, 0);
     transition: border-bottom 0.2s; }
+    @media only screen and (max-width: 40.625em) {
+      .nav__link {
+        padding: 1rem 0;
+        border-bottom: none; } }
     .nav__link--active {
       border-bottom: 3px solid white; }
+      @media only screen and (max-width: 40.625em) {
+        .nav__link--active {
+          border-bottom: none;
+          border-right: 5px solid white; } }
     .nav__link:hover:not(.nav__link--active) {
       border-bottom: 3px solid rgba(255, 255, 255, 0.4); }
+      @media only screen and (max-width: 40.625em) {
+        .nav__link:hover:not(.nav__link--active) {
+          border-bottom: none;
+          border-right: 5px solid rgba(255, 255, 255, 0.4); } }
     @media only screen and (max-width: 62.5em) {
       .nav__link__num {
         display: none; } }
+    @media only screen and (max-width: 40.625em) {
+      .nav__link__num {
+        display: inline-block; } }
 
 .sub-title {
   display: flex;
@@ -136,6 +202,9 @@ body {
 .nav-text {
   font-size: 1.6rem;
   letter-spacing: 2.7px; }
+  @media only screen and (max-width: 40.625em) {
+    .nav-text {
+      font-size: 2.4rem; } }
 
 .body-text {
   font-family: "Barlow", sans-serif;
@@ -357,7 +426,7 @@ body {
       @media only screen and (max-width: 62.5em) {
         .crew__content .body-text {
           margin-bottom: 5rem;
-          padding: 0 20%; } }
+          padding: 0 18%; } }
   .crew__slider {
     position: relative;
     min-height: 38rem;

@@ -50,6 +50,10 @@
   @extend %sub-heading;
   font-size: 1.6rem;
   letter-spacing: 2.7px;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 2.4rem;
+  }
 }
 
 .body-text {
