@@ -11,6 +11,7 @@ $screen-large2: 81.25em; // 1300px
 $screen-large1: 68.75em; // 1100px
 $screen-tablet: 62.5em; // 1000px
 $screen-mobile: 40.625em; // 630px
+$screen-mini: 22.5em; // 360px
 
 //////////////////////////////////////@at-root
 
@@ -28,6 +29,10 @@ html {
   font-size: 62.5%; // 10px as 1 rem
 
   overflow-x: hidden;
+
+  @media only screen and (max-width: $screen-mini) {
+    font-size: 56.25%;
+  }
 }
 
 body {
@@ -183,6 +188,12 @@ body {
       padding: 20rem 0 0 5rem;
       transform: translateX(100%);
       transition: all 0.3s;
+
+      background-image: linear-gradient(
+        to bottom,
+        rgba($color-primary, 0.3),
+        rgba($color-secondary, 0.3)
+      );
     }
 
     &--close {
@@ -245,6 +256,15 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+
+  @media only screen and (max-width: $screen-tablet) {
+    margin-left: 10%;
+  }
+
+  @media only screen and (max-width: $screen-mobile) {
+    margin: 0;
+    justify-content: center;
+  }
 
   &__num {
     color: $color-grey-dark;

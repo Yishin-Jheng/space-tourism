@@ -26,10 +26,11 @@ const sliderComponent = function () {
   const goToSlide = function (curSlide) {
     slides.forEach(
       (slide, i) =>
-        (slide.style.transform = `translateY(${(i - curSlide) * 100}%)`)
+        (slide.style.transform = `translateY(${(i - curSlide) * 100 - 1}%)`)
     );
     imgs.forEach(
-      (img, i) => (img.style.transform = `translateY(${(i - curSlide) * 100}%)`)
+      (img, i) =>
+        (img.style.transform = `translateY(${(i - curSlide) * 100 - 1}%)`)
     );
 
     activateTab(curSlide);

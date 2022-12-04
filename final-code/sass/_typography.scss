@@ -12,38 +12,70 @@
 .heading-1 {
   @extend %heading;
   font-size: 15rem;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 10rem;
+  }
 }
 
 .heading-2 {
   @extend %heading;
   font-size: 10rem;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 7rem;
+  }
 }
 
 .heading-3 {
   @extend %heading;
   font-size: 5.6rem;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 3.8rem;
+  }
 }
 
 .heading-4 {
   @extend %heading;
   font-size: 3.2rem;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 2.2rem;
+  }
 }
 
 .heading-5 {
   @extend %sub-heading;
   font-size: 2.8rem;
   letter-spacing: 4.75px;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: $screen-mini) {
+    font-size: 1.8rem;
+  }
 }
 
 .subheading-1 {
   @extend %heading;
   font-size: 2.8rem;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 3.8rem;
+  }
 }
 
 .subheading-2 {
   @extend %sub-heading;
   font-size: 1.4rem;
   letter-spacing: 2.35px;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 2rem;
+  }
 }
 
 .nav-text {
@@ -52,7 +84,7 @@
   letter-spacing: 2.7px;
 
   @media only screen and (max-width: $screen-mobile) {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 
@@ -60,4 +92,8 @@
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
+
+  @media only screen and (max-width: $screen-mobile) {
+    font-size: 2rem;
+  }
 }

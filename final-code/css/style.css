@@ -10,6 +10,9 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   overflow-x: hidden; }
+  @media only screen and (max-width: 22.5em) {
+    html {
+      font-size: 56.25%; } }
 
 body {
   font-family: "Bellefair", serif;
@@ -120,7 +123,8 @@ body {
         justify-content: flex-start;
         padding: 20rem 0 0 5rem;
         transform: translateX(100%);
-        transition: all 0.3s; } }
+        transition: all 0.3s;
+        background-image: linear-gradient(to bottom, rgba(11, 13, 23, 0.3), rgba(208, 214, 249, 0.3)); } }
     @media only screen and (max-width: 40.625em) {
       .nav__links--close {
         transform: translateX(100%); } }
@@ -161,6 +165,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem; }
+  @media only screen and (max-width: 62.5em) {
+    .sub-title {
+      margin-left: 10%; } }
+  @media only screen and (max-width: 40.625em) {
+    .sub-title {
+      margin: 0;
+      justify-content: center; } }
   .sub-title__num {
     color: #50535b;
     font-weight: bold; }
@@ -178,38 +189,65 @@ body {
 
 .heading-1 {
   font-size: 15rem; }
+  @media only screen and (max-width: 40.625em) {
+    .heading-1 {
+      font-size: 10rem; } }
 
 .heading-2 {
   font-size: 10rem; }
+  @media only screen and (max-width: 40.625em) {
+    .heading-2 {
+      font-size: 7rem; } }
 
 .heading-3 {
   font-size: 5.6rem; }
+  @media only screen and (max-width: 40.625em) {
+    .heading-3 {
+      font-size: 3.8rem; } }
 
 .heading-4 {
   font-size: 3.2rem; }
+  @media only screen and (max-width: 40.625em) {
+    .heading-4 {
+      font-size: 2.2rem; } }
 
 .heading-5 {
   font-size: 2.8rem;
   letter-spacing: 4.75px; }
+  @media only screen and (max-width: 40.625em) {
+    .heading-5 {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 22.5em) {
+    .heading-5 {
+      font-size: 1.8rem; } }
 
 .subheading-1 {
   font-size: 2.8rem; }
+  @media only screen and (max-width: 40.625em) {
+    .subheading-1 {
+      font-size: 3.8rem; } }
 
 .subheading-2 {
   font-size: 1.4rem;
   letter-spacing: 2.35px; }
+  @media only screen and (max-width: 40.625em) {
+    .subheading-2 {
+      font-size: 2rem; } }
 
 .nav-text {
   font-size: 1.6rem;
   letter-spacing: 2.7px; }
   @media only screen and (max-width: 40.625em) {
     .nav-text {
-      font-size: 2.4rem; } }
+      font-size: 2rem; } }
 
 .body-text {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 1.8rem; }
+  @media only screen and (max-width: 40.625em) {
+    .body-text {
+      font-size: 2rem; } }
 
 .background-1 {
   background-image: url(../assets/home/background-home-desktop.jpg);
@@ -220,6 +258,9 @@ body {
   @media only screen and (max-width: 62.5em) {
     .background-1 {
       background-image: url(../assets/home/background-home-tablet.jpg); } }
+  @media only screen and (max-width: 40.625em) {
+    .background-1 {
+      background-image: url(../assets/home/background-home-mobile.jpg); } }
 
 .home {
   grid-column-gap: calc(70% - 60rem);
@@ -230,11 +271,17 @@ body {
       gap: 13rem;
       padding: 13rem 0;
       text-align: center; } }
+  @media only screen and (max-width: 40.625em) {
+    .home {
+      padding: 8rem 0; } }
   @media only screen and (max-width: 62.5em) {
     .home__span {
       display: block;
       max-width: 60%;
       margin: 0 auto; } }
+  @media only screen and (max-width: 40.625em) {
+    .home__span {
+      max-width: 80%; } }
   .home__btn {
     align-self: end;
     position: relative; }
@@ -245,20 +292,23 @@ body {
   background-color: #fff;
   color: #0b0d17;
   border: none;
-  border-radius: 50%;
-  font-size: 3rem;
   cursor: pointer;
-  width: 25rem;
-  height: 25rem;
   position: relative;
   z-index: 10; }
+  .btn, .btn--hover {
+    font-size: 3rem;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%; }
+    @media only screen and (max-width: 40.625em) {
+      .btn, .btn--hover {
+        font-size: 2.6rem;
+        width: 21rem;
+        height: 21rem; } }
   .btn--hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
     transition: all 0.3s;
     background-color: rgba(255, 255, 255, 0.15);
     z-index: 1; }
@@ -279,7 +329,8 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px; }
 
 .background-2 {
   background-image: url(../assets/destination/background-destination-desktop.jpg);
@@ -290,6 +341,9 @@ body {
   @media only screen and (max-width: 62.5em) {
     .background-2 {
       background-image: url(../assets/destination/background-destination-tablet.jpg); } }
+  @media only screen and (max-width: 40.625em) {
+    .background-2 {
+      background-image: url(../assets/destination/background-destination-mobile.jpg); } }
 
 .planet-img {
   margin: 8rem;
@@ -298,8 +352,15 @@ body {
     .planet-img {
       margin: 8rem 12rem 2rem 12rem;
       text-align: center; } }
+  @media only screen and (max-width: 40.625em) {
+    .planet-img {
+      margin: 4rem 8rem 2rem 8rem; } }
   .planet-img--active {
     display: block; }
+  @media only screen and (max-width: 40.625em) {
+    .planet-img > img {
+      width: 280px;
+      height: auto; } }
 
 .sub-nav {
   display: flex;
@@ -312,8 +373,12 @@ body {
       gap: 5rem;
       justify-content: center;
       margin: 3rem 0; } }
+  @media only screen and (max-width: 40.625em) {
+    .sub-nav {
+      gap: 3rem;
+      margin: 1.5rem 0; } }
   .sub-nav__link {
-    color: #fff;
+    color: #d0d6f9;
     cursor: pointer;
     padding: 1rem 0 calc(1rem - 3px) 0;
     border-bottom: 3px solid rgba(255, 255, 255, 0);
@@ -322,6 +387,7 @@ body {
       color: currentColor;
       text-decoration: none; }
     .sub-nav__link--active {
+      color: #fff;
       border-bottom: 3px solid white; }
     .sub-nav__link:hover:not(.sub-nav__link--active) {
       border-bottom: 3px solid rgba(255, 255, 255, 0.4); }
@@ -333,11 +399,11 @@ body {
   @media only screen and (max-width: 81.25em) {
     .destination {
       grid-column-gap: 0; } }
+  @media only screen and (max-width: 40.625em) {
+    .destination {
+      padding: 6rem 0; } }
   .destination__title {
     position: relative; }
-    @media only screen and (max-width: 62.5em) {
-      .destination__title .sub-title {
-        margin-left: 10%; } }
   .destination__content {
     margin-top: 9rem; }
     @media only screen and (max-width: 62.5em) {
@@ -363,16 +429,21 @@ body {
     .destination__text--active {
       display: block; }
   .destination__info {
-    display: grid;
-    grid-template-columns: repeat(2, max-content);
-    grid-column-gap: 8rem;
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
     margin-top: 2rem; }
     @media only screen and (max-width: 62.5em) {
       .destination__info {
         margin-top: 4rem;
         justify-content: center; } }
-    .destination__info .subheading-2 {
-      grid-row: 1 / 2; }
+    @media only screen and (max-width: 40.625em) {
+      .destination__info {
+        gap: 3rem;
+        flex-direction: column; } }
+    .destination__info-1, .destination__info-2 {
+      display: flex;
+      flex-direction: column; }
 
 .crew__slide, .crew__img, .technology__slide, .technology__img {
   position: absolute;
@@ -387,14 +458,21 @@ body {
   @media only screen and (max-width: 62.5em) {
     .background-3 {
       background-image: url(../assets/crew/background-crew-tablet.jpg); } }
+  @media only screen and (max-width: 40.625em) {
+    .background-3 {
+      background-image: url(../assets/crew/background-crew-mobile.jpg); } }
 
 .crew {
   grid-column-gap: 0;
   justify-content: center;
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  position: relative; }
   @media only screen and (max-width: 62.5em) {
     .crew {
       justify-items: center; } }
+  @media only screen and (max-width: 40.625em) {
+    .crew {
+      padding: 6rem 0; } }
   .crew__content {
     width: 63rem; }
     @media only screen and (max-width: 81.25em) {
@@ -403,14 +481,23 @@ body {
     @media only screen and (max-width: 62.5em) {
       .crew__content {
         width: 100%; } }
+    @media only screen and (max-width: 40.625em) {
+      .crew__content {
+        display: flex;
+        flex-direction: column-reverse; } }
     .crew__content .sub-title {
+      width: max-content;
       margin-bottom: 15rem; }
       @media only screen and (max-width: 81.25em) {
         .crew__content .sub-title {
           margin-bottom: 10rem; } }
-      @media only screen and (max-width: 62.5em) {
+      @media only screen and (max-width: 40.625em) {
         .crew__content .sub-title {
-          margin-left: 10%; } }
+          position: absolute;
+          left: 50%;
+          top: 6rem;
+          margin-bottom: 0;
+          transform: translateX(-50%); } }
     .crew__content .heading-3 {
       color: #fff;
       margin-bottom: 2rem; }
@@ -427,6 +514,9 @@ body {
         .crew__content .body-text {
           margin-bottom: 5rem;
           padding: 0 18%; } }
+      @media only screen and (max-width: 40.625em) {
+        .crew__content .body-text {
+          padding: 0 5%; } }
   .crew__slider {
     position: relative;
     min-height: 38rem;
@@ -446,18 +536,38 @@ body {
     width: 62.5rem;
     min-height: 70rem;
     overflow: hidden; }
-    @media only screen and (max-width: 68.75em) {
+    @media only screen and (max-width: 81.25em) {
       .crew__imgs {
         width: 55rem; } }
-    @media only screen and (max-width: 62.5em) {
+    @media only screen and (max-width: 68.75em) {
       .crew__imgs {
-        width: 62.5rem; } }
+        min-height: 62.5rem;
+        width: 50rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .crew__imgs {
+        width: 90vw;
+        min-height: 360px;
+        grid-row: 1 / 2;
+        margin-top: 7rem;
+        margin-bottom: 5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); } }
   .crew__img {
     bottom: 0; }
     @media only screen and (max-width: 62.5em) {
       .crew__img {
         margin-left: 0;
         text-align: center; } }
+    @media only screen and (max-width: 40.625em) {
+      .crew__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }
+    @media only screen and (max-width: 68.75em) {
+      .crew__img > img {
+        height: 580px; } }
+    @media only screen and (max-width: 40.625em) {
+      .crew__img > img {
+        height: 350px; } }
   .crew__dots {
     margin-top: 8rem;
     display: flex;
@@ -502,8 +612,7 @@ body {
       justify-content: center;
       justify-items: center; } }
   .technology__content {
-    margin-left: 16rem;
-    width: 65rem; }
+    margin-left: 16rem; }
     @media only screen and (max-width: 81.25em) {
       .technology__content {
         margin-left: 5rem; } }
@@ -511,14 +620,23 @@ body {
       .technology__content {
         margin-top: 4rem;
         margin-left: 0; } }
+    @media only screen and (max-width: 40.625em) {
+      .technology__content {
+        margin-top: 1.5rem; } }
     .technology__content .sub-title {
+      width: max-content;
       margin-bottom: 14rem; }
       @media only screen and (max-width: 62.5em) {
         .technology__content .sub-title {
           position: absolute;
           top: 10rem;
-          left: 10%;
+          left: 0;
           margin-bottom: 0; } }
+      @media only screen and (max-width: 40.625em) {
+        .technology__content .sub-title {
+          left: 50%;
+          top: 6rem;
+          transform: translateX(-50%); } }
     .technology__content .heading-3 {
       color: #fff; }
     .technology__content .body-text {
@@ -529,6 +647,12 @@ body {
         .technology__content .body-text {
           width: 100%;
           margin-bottom: 15rem; } }
+      @media only screen and (max-width: 40.625em) {
+        .technology__content .body-text {
+          max-width: 90%;
+          margin-top: 2rem;
+          margin-left: auto;
+          margin-right: auto; } }
   .technology__container {
     display: flex; }
     @media only screen and (max-width: 62.5em) {
@@ -538,6 +662,9 @@ body {
         gap: 7rem;
         text-align: center;
         margin-bottom: 5rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .technology__container {
+        gap: 4rem; } }
   .technology__slider {
     position: relative;
     min-width: 49rem;
@@ -545,6 +672,13 @@ body {
     @media only screen and (max-width: 62.5em) {
       .technology__slider {
         min-height: 32rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .technology__slider {
+        min-height: 40rem;
+        min-width: 95vw; } }
+    @media only screen and (max-width: 22.5em) {
+      .technology__slider {
+        min-height: 49rem; } }
   .technology__slide {
     top: 0;
     margin: 0 1rem; }
@@ -580,6 +714,10 @@ body {
         .technology__tabs .tab {
           width: 7rem;
           height: 7rem; } }
+      @media only screen and (max-width: 40.625em) {
+        .technology__tabs .tab {
+          width: 5.5rem;
+          height: 5.5rem; } }
       .technology__tabs .tab:hover:not(.tab--active) {
         border: 1px solid #fff; }
       .technology__tabs .tab--active {
@@ -590,16 +728,35 @@ body {
     width: 51.5rem;
     min-height: 60rem;
     overflow: hidden; }
+    @media only screen and (max-width: 81.25em) {
+      .technology__imgs {
+        width: 45rem;
+        min-height: 50rem; } }
+    @media only screen and (max-width: 68.75em) {
+      .technology__imgs {
+        width: 40rem; } }
     @media only screen and (max-width: 62.5em) {
       .technology__imgs {
         grid-row: 1 / 2;
-        width: 100%;
+        width: 100vw;
         min-height: 40rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .technology__imgs {
+        min-height: calc(100vw * 0.5 + 1rem); } }
   .technology__img {
     right: 0; }
     .technology__img > * {
       display: block;
       margin-top: 8rem; }
+      @media only screen and (max-width: 81.25em) {
+        .technology__img > * {
+          width: 450px; } }
+      @media only screen and (max-width: 68.75em) {
+        .technology__img > * {
+          width: 400px; } }
       @media only screen and (max-width: 62.5em) {
         .technology__img > * {
           width: 101%; } }
+      @media only screen and (max-width: 40.625em) {
+        .technology__img > * {
+          margin-top: 4rem; } }

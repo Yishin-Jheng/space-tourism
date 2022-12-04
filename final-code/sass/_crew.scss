@@ -15,15 +15,24 @@
   @media only screen and (max-width: $screen-tablet) {
     background-image: url(../assets/crew/background-crew-tablet.jpg);
   }
+
+  @media only screen and (max-width: $screen-mobile) {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
 }
 
 .crew {
   grid-column-gap: 0;
   justify-content: center;
   padding-top: 10rem;
+  position: relative;
 
   @media only screen and (max-width: $screen-tablet) {
     justify-items: center;
+  }
+
+  @media only screen and (max-width: $screen-mobile) {
+    padding: 6rem 0;
   }
 
   &__content {
@@ -37,15 +46,25 @@
       width: 100%;
     }
 
+    @media only screen and (max-width: $screen-mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
     .sub-title {
+      width: max-content;
       margin-bottom: 15rem;
 
       @media only screen and (max-width: $screen-large2) {
         margin-bottom: 10rem;
       }
 
-      @media only screen and (max-width: $screen-tablet) {
-        margin-left: 10%;
+      @media only screen and (max-width: $screen-mobile) {
+        position: absolute;
+        left: 50%;
+        top: 6rem;
+        margin-bottom: 0;
+        transform: translateX(-50%);
       }
     }
 
@@ -70,6 +89,10 @@
       @media only screen and (max-width: $screen-tablet) {
         margin-bottom: 5rem;
         padding: 0 18%;
+      }
+
+      @media only screen and (max-width: $screen-mobile) {
+        padding: 0 5%;
       }
     }
   }
@@ -102,12 +125,23 @@
     min-height: 70rem;
     overflow: hidden;
 
-    @media only screen and (max-width: $screen-large1) {
+    @media only screen and (max-width: $screen-large2) {
       width: 55rem;
     }
 
-    @media only screen and (max-width: $screen-tablet) {
-      width: 62.5rem;
+    @media only screen and (max-width: $screen-large1) {
+      min-height: 62.5rem;
+      width: 50rem;
+    }
+
+    @media only screen and (max-width: $screen-mobile) {
+      width: 90vw;
+      min-height: 360px;
+
+      grid-row: 1 / 2;
+      margin-top: 7rem;
+      margin-bottom: 5rem;
+      border-bottom: 1px solid rgba($color-white, 0.2);
     }
   }
 
@@ -119,6 +153,22 @@
     @media only screen and (max-width: $screen-tablet) {
       margin-left: 0;
       text-align: center;
+    }
+
+    @media only screen and (max-width: $screen-mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & > img {
+      @media only screen and (max-width: $screen-large1) {
+        height: 580px;
+      }
+
+      @media only screen and (max-width: $screen-mobile) {
+        height: 350px;
+      }
     }
   }
 

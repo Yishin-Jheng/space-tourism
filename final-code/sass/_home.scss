@@ -8,6 +8,10 @@
   @media only screen and (max-width: $screen-tablet) {
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
+
+  @media only screen and (max-width: $screen-mobile) {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+  }
 }
 
 .home {
@@ -21,11 +25,19 @@
     text-align: center;
   }
 
+  @media only screen and (max-width: $screen-mobile) {
+    padding: 8rem 0;
+  }
+
   &__span {
     @media only screen and (max-width: $screen-tablet) {
       display: block;
       max-width: 60%;
       margin: 0 auto;
+    }
+
+    @media only screen and (max-width: $screen-mobile) {
+      max-width: 80%;
     }
   }
 
@@ -45,23 +57,30 @@
   background-color: $color-white;
   color: $color-primary;
   border: none;
-  border-radius: 50%;
-  font-size: 3rem;
-  cursor: pointer;
 
-  width: 25rem;
-  height: 25rem;
+  cursor: pointer;
   position: relative;
   z-index: 10;
+
+  &,
+  &--hover {
+    font-size: 3rem;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+
+    @media only screen and (max-width: $screen-mobile) {
+      font-size: 2.6rem;
+      width: 21rem;
+      height: 21rem;
+    }
+  }
 
   &--hover {
     position: absolute;
     top: 0;
     left: 0;
-    // transform: scale(0.5);
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
+
     transition: all 0.3s;
     background-color: rgba($color-white, 0.15);
     z-index: 1;
@@ -90,5 +109,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    letter-spacing: 2px;
   }
 }
