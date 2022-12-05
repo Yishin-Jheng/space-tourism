@@ -35,6 +35,10 @@
     padding: 6rem 0;
   }
 
+  @media only screen and (max-width: $screen-mini) {
+    padding: 6rem 0 0 0;
+  }
+
   &__content {
     width: 63rem;
 
@@ -88,7 +92,7 @@
 
       @media only screen and (max-width: $screen-tablet) {
         margin-bottom: 5rem;
-        padding: 0 18%;
+        padding: 0 16%;
       }
 
       @media only screen and (max-width: $screen-mobile) {
@@ -107,6 +111,16 @@
       min-height: 32rem;
       margin-bottom: 3rem;
     }
+
+    @media only screen and (max-width: $screen-mobile) {
+      min-height: 36rem;
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: $screen-mini) {
+      min-height: 50rem;
+      margin-bottom: 0;
+    }
   }
 
   &__slide {
@@ -121,17 +135,13 @@
 
   &__imgs {
     position: relative;
-    width: 62.5rem;
+    width: 55rem;
     min-height: 70rem;
     overflow: hidden;
 
-    @media only screen and (max-width: $screen-large2) {
-      width: 55rem;
-    }
-
     @media only screen and (max-width: $screen-large1) {
       min-height: 62.5rem;
-      width: 50rem;
+      width: 47rem;
     }
 
     @media only screen and (max-width: $screen-mobile) {
@@ -150,6 +160,9 @@
 
     bottom: 0;
 
+    display: flex;
+    justify-content: center;
+
     @media only screen and (max-width: $screen-tablet) {
       margin-left: 0;
       text-align: center;
@@ -163,7 +176,7 @@
 
     & > img {
       @media only screen and (max-width: $screen-large1) {
-        height: 580px;
+        height: 520px;
       }
 
       @media only screen and (max-width: $screen-mobile) {
@@ -173,7 +186,7 @@
   }
 
   &__dots {
-    margin-top: 8rem;
+    margin-top: 6rem;
     display: flex;
     align-items: center;
     gap: 2rem;

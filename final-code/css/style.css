@@ -124,7 +124,7 @@ body {
         padding: 20rem 0 0 5rem;
         transform: translateX(100%);
         transition: all 0.3s;
-        background-image: linear-gradient(to bottom, rgba(11, 13, 23, 0.3), rgba(208, 214, 249, 0.3)); } }
+        background-image: linear-gradient(to bottom, rgba(11, 13, 23, 0.5), rgba(208, 214, 249, 0.3)); } }
     @media only screen and (max-width: 40.625em) {
       .nav__links--close {
         transform: translateX(100%); } }
@@ -247,7 +247,7 @@ body {
   font-size: 1.8rem; }
   @media only screen and (max-width: 40.625em) {
     .body-text {
-      font-size: 2rem; } }
+      font-size: 1.9rem; } }
 
 .background-1 {
   background-image: url(../assets/home/background-home-desktop.jpg);
@@ -420,7 +420,10 @@ body {
       @media only screen and (max-width: 62.5em) {
         .destination__content .body-text {
           width: auto;
-          margin: 0 7rem; } }
+          margin: 0 10rem; } }
+      @media only screen and (max-width: 40.625em) {
+        .destination__content .body-text {
+          margin: 0 10%; } }
   .destination__text {
     display: none; }
     @media only screen and (max-width: 62.5em) {
@@ -473,6 +476,9 @@ body {
   @media only screen and (max-width: 40.625em) {
     .crew {
       padding: 6rem 0; } }
+  @media only screen and (max-width: 22.5em) {
+    .crew {
+      padding: 6rem 0 0 0; } }
   .crew__content {
     width: 63rem; }
     @media only screen and (max-width: 81.25em) {
@@ -513,7 +519,7 @@ body {
       @media only screen and (max-width: 62.5em) {
         .crew__content .body-text {
           margin-bottom: 5rem;
-          padding: 0 18%; } }
+          padding: 0 16%; } }
       @media only screen and (max-width: 40.625em) {
         .crew__content .body-text {
           padding: 0 5%; } }
@@ -526,6 +532,14 @@ body {
         text-align: center;
         min-height: 32rem;
         margin-bottom: 3rem; } }
+    @media only screen and (max-width: 40.625em) {
+      .crew__slider {
+        min-height: 36rem;
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 22.5em) {
+      .crew__slider {
+        min-height: 50rem;
+        margin-bottom: 0; } }
   .crew__slide {
     top: 0; }
     @media only screen and (max-width: 62.5em) {
@@ -533,16 +547,13 @@ body {
         padding: 0; } }
   .crew__imgs {
     position: relative;
-    width: 62.5rem;
+    width: 55rem;
     min-height: 70rem;
     overflow: hidden; }
-    @media only screen and (max-width: 81.25em) {
-      .crew__imgs {
-        width: 55rem; } }
     @media only screen and (max-width: 68.75em) {
       .crew__imgs {
         min-height: 62.5rem;
-        width: 50rem; } }
+        width: 47rem; } }
     @media only screen and (max-width: 40.625em) {
       .crew__imgs {
         width: 90vw;
@@ -552,7 +563,9 @@ body {
         margin-bottom: 5rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2); } }
   .crew__img {
-    bottom: 0; }
+    bottom: 0;
+    display: flex;
+    justify-content: center; }
     @media only screen and (max-width: 62.5em) {
       .crew__img {
         margin-left: 0;
@@ -564,12 +577,12 @@ body {
         align-items: center; } }
     @media only screen and (max-width: 68.75em) {
       .crew__img > img {
-        height: 580px; } }
+        height: 520px; } }
     @media only screen and (max-width: 40.625em) {
       .crew__img > img {
         height: 350px; } }
   .crew__dots {
-    margin-top: 8rem;
+    margin-top: 6rem;
     display: flex;
     align-items: center;
     gap: 2rem; }
@@ -674,11 +687,11 @@ body {
         min-height: 32rem; } }
     @media only screen and (max-width: 40.625em) {
       .technology__slider {
-        min-height: 40rem;
+        min-height: 39rem;
         min-width: 95vw; } }
     @media only screen and (max-width: 22.5em) {
       .technology__slider {
-        min-height: 49rem; } }
+        min-height: 48rem; } }
   .technology__slide {
     top: 0;
     margin: 0 1rem; }
@@ -747,6 +760,8 @@ body {
     right: 0; }
     .technology__img > * {
       display: block;
+      margin-left: auto;
+      margin-right: 0;
       margin-top: 8rem; }
       @media only screen and (max-width: 81.25em) {
         .technology__img > * {
