@@ -81,8 +81,8 @@ const sliderComponent = function () {
   let touchendX = 0;
 
   function checkDirection() {
-    if (touchendX < touchstartX) nextSlide();
-    else if (touchendX > touchstartX) prevSlide();
+    if (touchendX - touchstartX < -50) nextSlide();
+    else if (touchendX - touchstartX > 50) prevSlide();
   }
 
   document.addEventListener("touchstart", (e) => {
