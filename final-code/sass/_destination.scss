@@ -138,26 +138,6 @@
     }
   }
 
-  // &__info {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, max-content);
-  //   grid-column-gap: 8rem;
-  //   margin-top: 2rem;
-
-  //   @media only screen and (max-width: $screen-tablet) {
-  //     margin-top: 4rem;
-  //     justify-content: center;
-  //   }
-
-  //   @media only screen and (max-width: $screen-mobile) {
-  //     grid-template-columns: repeat(1, max-content);
-  //   }
-
-  //   .subheading-2 {
-  //     grid-row: 1 / 2;
-  //   }
-  // }
-
   &__info {
     display: flex;
     gap: 8rem;
