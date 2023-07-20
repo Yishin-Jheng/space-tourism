@@ -32,17 +32,25 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-VQ92XiN1lh)
-- Live Site URL: [Live site on Netlify](https://space-tourism-yishin.netlify.app/)
+- Live Site URL (Original ver.): [Live site on Netlify](https://space-tourism-yishin.netlify.app/)
+- Live Site URL (React ver.): [Live site on Netlify](https://space-tourism-react-yishin.netlify.app/)
 
 ## My process
 
 ### Built with
+
+#### Original ver.
 
 - Desktop-first workflow
 - Semantic HTML5 markup
 - JavaScript ES6+
 - SCSS - CSS preprocessor
 - Parcel - build tool for the web
+
+#### React ver.
+
+- [React](https://react.dev/) - JS library
+- [React-Router](https://reactrouter.com/) - JS library
 
 ### What I learned
 
